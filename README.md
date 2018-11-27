@@ -24,7 +24,7 @@ conda install h5py
 
 ## Datasets
 
-### Train、Val Dataset
+### Train and Val Dataset
 The train and val datasets are sampled from [ImageNet](http://www.image-net.org/).
 Train dataset has 100000 images. Val dataset has 1000 images.
 Download the datasets from [here](https://drive.google.com/file/d/1RNfvuZKdf8MZAb1zzVgsFSlX36oc1uPA/view?usp=sharing), 
