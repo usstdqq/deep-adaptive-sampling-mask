@@ -5,9 +5,6 @@ A PyTorch implementation of the paper:
 ## Requirements
 - [Anaconda](https://www.anaconda.com/download/)
 - [PyTorch](https://pytorch.org/)
-```
-conda install pytorch torchvision cuda80 -c pytorch
-```
 - tqdm
 ```
 pip install tqdm
