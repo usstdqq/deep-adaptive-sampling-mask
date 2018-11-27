@@ -28,17 +28,24 @@ conda install h5py
 ## Datasets
 
 ### Train、Val Dataset
-The train and val datasets are sampled from [VOC2012](http://cvlab.postech.ac.kr/~mooyeol/pascal_voc_2012/).
-Train dataset has 16700 images and Val dataset has 425 images.
-Download the datasets from [here](https://pan.baidu.com/s/1c17nfeo), 
-and then extract it into `data` directory. Finally run
-```
-python data_utils.py
+The train, val and test datasets are sampled from [ImageNet](http://www.image-net.org/).
+Train dataset has 100000 images. Val dataset has 1000 images. Test dataset has 100 images.
+Download the datasets from [here](https://drive.google.com/file/d/1RNfvuZKdf8MZAb1zzVgsFSlX36oc1uPA/view?usp=sharing), 
+and then extract it into `$data` directory. Modify the path of `$data` directory in line#48 of file train_NetE.py and line #48 of file train_NetM.py.
 
-optional arguments:
---upscale_factor      super resolution upscale factor [default value is 3]
+First run
 ```
-to generate train and val datasets from VOC2012 with given upscale factors(options: 2、3、4、8).
+python train_NetE.py
+
+```
+to train the image inpainting network NetE. 
+
+After NetE is trained, modify the file name of trained NetE in line#29 of file train_NetM.py and run
+```
+python train_NetM.py
+
+```
+to train the adaptive image sampling network NetM.
 
 ### Test Image Dataset
 The test image dataset are sampled from 
