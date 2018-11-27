@@ -1,17 +1,12 @@
-# ESPCN
-A PyTorch implementation of ESPCN based on CVPR2016 paper 
-[Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network](https://arxiv.org/abs/1609.05158)
+# Adaptive Image Sampling using Deep Learning
+A PyTorch implementation of the paper:
+[Adaptive Image Sampling using Deep Learning and its Application on X-Ray Fluorescence Image Reconstruction](arxiv to be appear)
 
 ## Requirements
 - [Anaconda](https://www.anaconda.com/download/)
-- PyTorch
+- [PyTorch](https://pytorch.org/)
 ```
-conda install pytorch torchvision -c soumith
-conda install pytorch torchvision cuda80 -c soumith # install it if you have installed cuda
-```
-- PyTorchNet
-```
-pip install git+https://github.com/pytorch/tnt.git@master
+conda install pytorch torchvision cuda80 -c pytorch
 ```
 - tqdm
 ```
@@ -20,6 +15,14 @@ pip install tqdm
 - opencv
 ```
 conda install -c conda-forge opencv
+```
+- [tensorboard_logger](https://github.com/TeamHG-Memex/tensorboard_logger)
+```
+pip install tensorboard_logger
+```
+- h5py
+```
+conda install h5py
 ```
 
 ## Datasets
