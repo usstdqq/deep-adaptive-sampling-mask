@@ -28,60 +28,34 @@ conda install h5py
 ## Datasets
 
 ### Train、Val Dataset
-The train, val and test datasets are sampled from [ImageNet](http://www.image-net.org/).
-Train dataset has 100000 images. Val dataset has 1000 images. Test dataset has 100 images.
+The train and val datasets are sampled from [ImageNet](http://www.image-net.org/).
+Train dataset has 100000 images. Val dataset has 1000 images.
 Download the datasets from [here](https://drive.google.com/file/d/1RNfvuZKdf8MZAb1zzVgsFSlX36oc1uPA/view?usp=sharing), 
-and then extract it into `$data` directory. Modify the path of `$data` directory in line#48 of file train_NetE.py and line #48 of file train_NetM.py.
+and then extract it into `$data` directory. Modify the path of `$data` directory in line#48 of file train_NetE.py and line#48 of file train_NetM.py.
+
+### Test Image Dataset
+The test image dataset are sampled from [ImageNet](http://www.image-net.org/). It contains 100 images. It is stored in file data_val_100.h5 .
+
+## Usage
+
+### Train
 
 First run
 ```
 python train_NetE.py
-
 ```
 to train the image inpainting network NetE. 
 
 After NetE is trained, modify the file name of trained NetE in line#29 of file train_NetM.py and run
 ```
 python train_NetM.py
-
 ```
 to train the adaptive image sampling network NetM.
 
-### Test Image Dataset
-The test image dataset are sampled from 
-| **Set 5** |  [Bevilacqua et al. BMVC 2012](http://people.rennes.inria.fr/Aline.Roumy/results/SR_BMVC12.html)
-| **Set 14** |  [Zeyde et al. LNCS 2010](https://sites.google.com/site/romanzeyde/research-interests)
-| **BSD 100** | [Martin et al. ICCV 2001](https://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/)
-| **Sun-Hays 80** | [Sun and Hays ICCP 2012](http://cs.brown.edu/~lbsun/SRproj2012/SR_iccp2012.html)
-| **Urban 100** | [Huang et al. CVPR 2015](https://sites.google.com/site/jbhuang0604/publications/struct_sr).
-Download the image dataset from [here](https://pan.baidu.com/s/1nuGyn8l), and then extract it into `data` directory.
-
-### Test Video Dataset
-The test dataset are sampled from Jay Chou's Music Videos. Download the video dataset from 
-[here](https://pan.baidu.com/s/1hr81GfM), and then extract it into `data/test/SRF_xx/video` 
-directory, which `xx` means the upscale factor.
-
-## Usage
-
-### Train
-
+To visualize the training process log, run
 ```
-python -m visdom.server & python train.py
-
-optional arguments:
---upscale_factor      super resolution upscale factor [default value is 3]
---num_epochs          super resolution epochs number [default value is 100]
+tensorboard --logdir tensorBoardRuns
 ```
-Visdom now can be accessed by going to `127.0.0.1:8097` in your browser, 
-or your own host address if specified.
-
-If the above does not work, try using an SSH tunnel to your server by 
-adding the following line to your local `~/.ssh/config` :
-`LocalForward 127.0.0.1:8097 127.0.0.1:8097`.
-
-Maybe if you are in China, you should download the static resources from 
-[here](https://pan.baidu.com/s/1hr80UbU), and put them on 
-`~/anaconda3/lib/python3.6/site-packages/visdom/static/`.
 
 ### Test Image
 ```
