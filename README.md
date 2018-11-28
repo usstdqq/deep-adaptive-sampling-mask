@@ -58,11 +58,11 @@ tensorboard --logdir tensorBoardRuns
 ```
 python test_NetE_h5.py
 ```
-The output reconstructed images are on `results/netE_results` directory.
+The output reconstructed images are in `results/netE_results` directory.
 
 ### Test NetM
 ```
 python test_NetM_h5.py
 ```
-The output reconstructed images are on `results/netM_results` directory.
+The output reconstructed images are in `results/netM_results` directory.
 
