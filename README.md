@@ -35,13 +35,15 @@ The test image dataset are sampled from [ImageNet](http://www.image-net.org/). I
 
 ## Usage
 
-### Train
+### Train NetE
 
-First run
+Run
 ```
 python train_NetE.py
 ```
-to train the image inpainting network NetE. 
+to train the image inpainting network NetE.
+
+### Train NetM
 
 After NetE is trained, modify the file name of trained NetE in line#29 of file train_NetM.py and run
 ```
