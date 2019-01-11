@@ -1,6 +1,6 @@
 # Adaptive Image Sampling using Deep Learning
 A PyTorch implementation of the paper:
-[Adaptive Image Sampling using Deep Learning and its Application on X-Ray Fluorescence Image Reconstruction] [Arxiv Preprint](https://arxiv.org/abs/1812.10836)
+[Adaptive Image Sampling using Deep Learning and its Application on X-Ray Fluorescence Image Reconstruction] [[Arxiv Preprint]](https://arxiv.org/abs/1812.10836)
 
 ## Requirements
 - [Anaconda](https://www.anaconda.com/download/)
