@@ -2,6 +2,8 @@
 A PyTorch implementation of the paper:
 [Adaptive Image Sampling using Deep Learning and its Application on X-Ray Fluorescence Image Reconstruction] [[Arxiv Preprint]](https://arxiv.org/abs/1812.10836) [[IEEE Transactions on Multimedia Preprint]](https://ieeexplore.ieee.org/document/8930037) 
 
+## Introduction
+
 <img src='figs/mask_design_pipeline_web.png' width=800>
 
 Pipeline for adaptive sampling mask generation utilizing CNNs.
